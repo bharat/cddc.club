@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>CDDC</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:600,700" rel="stylesheet">
+    <style type="text/css">
+      body {
+        background: rgb(3, 5, 4);
+      }
+      #hero {
+        background-image: url("bg/bg-1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        border: 1px solid #adcbe3;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      var backgrounds = ["bg/bg-1.jpg"]; /*, "bg/bg-2.jpg", "bg/bg-3.jpg", "bg/bg-4.jpg", "bg/bg-5.jpg", "bg/bg-6.jpg"];*/
+      var selected_bg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+      $(document).ready(function() {
+          $("#hero").css("background-image", `url(${selected_bg})`);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="hero">
+    </div>
+  </body>
+</html>
